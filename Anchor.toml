@@ -5,8 +5,10 @@ anchor = "0.30"
 cluster = "devnet"
 wallet = "~/.config/solana/id.json"
 
+[workspace]
+members = [
+    "programs/percolator"
+]
+
 [programs]
 devnet = "Percolator1111111111111111111111111111111"
-
-[scripts]
-test = "yarn run mocha"
