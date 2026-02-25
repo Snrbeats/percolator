@@ -1,0 +1,21 @@
+[package]
+name = "percolator-solana"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "percolator_solana"
+crate-type = ["cdylib", "rlib"]
+
+[[bin]]
+name = "percolator-solana"
+path = "src/main.rs"
+
+[dependencies]
+anchor-lang = "0.30"
+solana-program = "1.18"
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
